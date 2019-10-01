@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: weather-forecast-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: weather-app
+      tier: forecast
+  template:
+    metadata:
+      labels:
+        app: weather-app
+        tier: forecast
+    spec:
+      containers:
+      - name: weather-forecast-service
+        image: harbor.virtualiseme.com.au/weather-app/forecast:latest
+        ports:
+        - containerPort: 3001

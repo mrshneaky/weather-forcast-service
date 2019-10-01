@@ -3,7 +3,7 @@ const express = require('express')
 const forecast = require('./utils/forecast')
 const app = express();
 
-const PORT = process.env.HTTP_PORT || 3002
+const PORT = process.env.WEATHER_FORECAST_LB_SERVICE_PORT || 3002
 
 //const latitude = process.env.LATITUDE
 //const longitude = process.env.LONGITUDE
