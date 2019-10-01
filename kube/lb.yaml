@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: weather-forecast-lb
+spec:
+  selector:
+    app: weather-app
+    tier: forecast
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 3002
+  type: LoadBalancer
