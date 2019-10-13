@@ -1,8 +1,9 @@
 const path = require('path')
 const express = require('express')
 const forecast = require('./utils/forecast')
+var cors = require('cors');
 const app = express();
-
+app.use(cors());
 const PORT = process.env.WEATHER_FORECAST_LB_SERVICE_PORT || 3002
 
 //const latitude = process.env.LATITUDE
